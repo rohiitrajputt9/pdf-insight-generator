@@ -35,3 +35,34 @@ persona-aware-pdf-intelligence/
 ├── smart_extractor1B.py # Main solution script
 ├── Dockerfile # Docker container file
 └── requirements.txt # Python dependencies
+---
+
+---
+
+## 📦 Tech Stack
+
+- Python 3.10+
+- [Sentence Transformers](https://www.sbert.net/) (`all-MiniLM-L6-v2`)
+- [PyMuPDF (fitz)](https://pymupdf.readthedocs.io/)
+- Docker (for reproducibility)
+
+---
+
+## 🧪 How It Works
+
+1. Parses the persona and job from the input
+2. Checks for predefined expected sections (if available)
+3. Ranks candidate text blocks from the PDFs by:
+   - Keyword matching
+   - Section title heuristics
+   - Semantic similarity score
+4. Selects top 5 most relevant sections and outputs them
+
+---
+
+## 🔄 How to Run Locally
+
+1. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+
